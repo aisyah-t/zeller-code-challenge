@@ -1,8 +1,11 @@
+import { Users } from "./views";
+import { UsersProvider } from "./views/context/UsersContext";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <UsersProvider>
+      <Users />
+    </UsersProvider>
   );
 }
 
