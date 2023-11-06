@@ -15,9 +15,15 @@ $ npm run dev
 
 You may need to press `o` in the terminal for Vite to open up the app in the browser. Alternatively press `h` for more information on different Vite commands.
 
+To run tests in the terminal:
+
+```
+$ npm run test
+```
+
 ## Plan
 
-These are my rough initial plans for building the app.
+These are my initial plans for building the app.
 
 ### Tech stack & libraries
 
@@ -49,6 +55,16 @@ These are my rough initial plans for building the app.
 - Default role when the page is rendered is `Admin`.
 - Internationalisation of strings is not currently required.
 
+## Challenges and learnings
+
+- Tailwind CSS is new to me and I'm used to writing straight CSS/SCSS. I decided to use it as it seems to have growing popularity in the industry. So far I like what I see and I'd like to continue experimenting with it.
+
+- Setting up Amplify for the GraphQL query is something I hadn't had to do previously. I followed the dev docs and eventually managed to use the GraphQL query provided.
+
+- I was hoping to be able to generate the GraphQL types as well but when I tried to follow the instructions in the Amplify docs it seemed I needed more info that I didn't have to be able to run `codegen`. So I ended up manually typing the query result.
+
+- Once I installed Amplify and tried to set up a test for `Users` which fetches the query, Jest didn't seem to play nice with it and kept erroring. In the interest of time I decided to remove the test for this component. I think the tests written for the children components should be sufficient for now.
+
 ## High level requirements
 
 Need to build a simple react app in Typescript to show Zeller customers. Customers should be fetched with the GraphQL APIs provided.
@@ -59,11 +75,3 @@ List of customers need to be filtered based on the selection of user type - Admi
 - If the selection is `Manager`, customers with a role `Manager` need to be listed.
 
 Please refer to the design attached for the UI - `zeller-customers-design.png`.
-
-## Zeller checklist
-
-1. Proper test coverage
-2. Best practises for performance optimisation
-3. Code quality
-4. Quality and Responsive UI
-5. Documentation describing the approach and setup guidelines.
